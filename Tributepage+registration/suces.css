@@ -1,0 +1,54 @@
+.y{
+    background-color: #241468;
+    height: 400px;
+    weight: 800px;
+    position: relative;
+    z-index: 1;
+}
+.he{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    background-color: #272829;
+    height: 100px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    z-index: 1;
+}
+p{
+    background-color: #241468;
+    color: white;
+    height: 400px;
+    weight: 800px;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.o{
+    background-color: #241468;
+    height: 400px;
+    weight: 800px;
+    position: relative;
+    z-index: 1;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+span{
+    background-color: #8062D6;
+    color: white;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    padding:0%;
+    border-radius: 5px;
+}
