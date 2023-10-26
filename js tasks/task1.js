@@ -40,3 +40,25 @@ while(pr.length<100){
     num++
 }
 console.log(pr)
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// second max using normal function
+
+function secmax(arr){
+    arr.sort((a,b)=>a-b)
+    return arr[arr.length-2];
+}
+// second max using anonymous function
+const secomax = function(arr){
+    arr.sort((x,y)=>y-x);
+    return arr[1];
+}
+// second max using arrow function
+const seconmax = (arr) => {
+    arr.sort((x,y)=>y-x);
+    return arr[1];
+}
+console.log(secmax([1,2,3,4,5,6,7,8,9,10]));
