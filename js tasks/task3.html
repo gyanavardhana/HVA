@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            place-items: center;
+        }
+        #colorbox{
+            width: 300px;
+            height: 300px;
+            margin: 80px;
+            background-color: grey;
+            border-radius: 10px;
+            text-align: center;
+        }
+        button{
+            margin: 10px;
+            width: 80px;
+            height: 50px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #btn1{
+            background-color: red;
+        }
+        #btn2{
+            background-color: green;
+        }
+        #btn3{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="colorbox">
+    </div>
+    <div>
+        <button id="btn1">click me</button>
+        <button id="btn2">click me</button>
+        <button id="btn3">click me</button>
+    </div>
+    <script>
+        const v1 = document.getElementById("btn1");
+        const v2 = document.getElementById("btn2");
+        const v3 = document.getElementById("btn3");
+        const v4 = document.getElementById("colorbox");
+        v1.addEventListener("click", function(){
+            v4.style.backgroundColor = "red";
+        });
+        v2.addEventListener("click", function(){
+            v4.style.backgroundColor = "green";
+        });
+        v3.addEventListener("click", function(){
+            v4.style.backgroundColor = "blue";
+        });
+    </script>
+</body>
+</html>
