@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+     // task 1
+      const task1 = function () {
+        console.log(document.getElementById("myDiv").innerText);
+      };
+
+      // task 2
+        const task2  = function () {
+            for (let i = 0; i < document.getElementsByClassName("myClass").length; i++) {
+                console.log(document.getElementsByClassName("myClass")[i].innerText);
+            }
+        };
+
+        // task 3
+        const task3 = function () {
+            for (let i = 0; i < document.getElementsByTagName("p").length; i++) {
+                console.log(document.getElementsByTagName("p")[i].innerText);
+            }
+        };
+
+        //task 4 
+        /*
+        Query Selector: Create an HTML file with a <div> element that has an ID attribute set to "myDiv" and contains the text "Hello, World!", 
+            and a <p> element with a class attribute set to "myClass" and contains the text "Paragraph".
+            Using JavaScript, fetch the <div> element using the ID selector (#myDiv) and log its contents to the console.
+             Then, fetch the <p> element using the class selector (.myClass) and log its contents to the console.
+        */
+
+        const task4 = function () {
+            console.log(document.querySelector("#myDiv").innerText);
+            console.log(document.querySelector(".myClass").innerText);
+        };
+    </script>
+  </head>
+
+  <body>
+    <div id="myDiv">Hello World!</div>
+    <button onclick="task1()">click for console output</button>
+
+    <div class="myClass">Hi i am first element</div>
+    <div class="myClass">Hi i am second element</div>
+    <button onclick="task2()">click for console output</button>
+
+    
+    <p class="myClass">paragraph</p>
+    <p>Hi i am first paragraph element</p>
+    <p>Hi i am second paragraph element</p>
+    <button onclick="task3()">click for console output</button>
+
+    
+    <button onclick="task4()">click for console output</button>
+
+
+  </body>
+</html>

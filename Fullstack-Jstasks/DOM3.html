@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myClass {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="paragraph">Some text</p>
+    <div id="divElement">Some text</div>
+    <p id="myParagraph">Text to change color</p>
+    <a id="myLink" href="https://www.google.com/">Google</a>
+    <div id="divWithClass">Some text</div>
+
+    <script>
+        document.getElementById("paragraph").innerText = "New Text";
+        document.getElementById("divElement").innerHTML = "<b>New Text</b>";
+        document.getElementById("myParagraph").style.color = "red";
+        document.getElementById("myLink").href = "https://www.facebook.com/";
+        document.getElementById("divWithClass").classList.add("myClass");
+    </script>
+</body>
+</html>

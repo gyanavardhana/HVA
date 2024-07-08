@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button onclick="addNewItem()">Add New Item</button>
+    <button onclick="removeFirstItem()">Remove First Item</button>
+
+    <script>
+        function addNewItem() {
+            const ul = document.getElementById("myList");
+            const li = document.createElement("li");
+            li.innerText = "New Item";
+            ul.appendChild(li);
+        }
+
+        function removeFirstItem() {
+            const ul = document.getElementById("myList");
+            if (ul.firstElementChild) {
+                ul.removeChild(ul.firstElementChild);
+            }
+        }
+    </script>
+</body>
+</html>

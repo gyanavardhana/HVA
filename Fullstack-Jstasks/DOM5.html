@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Event Listeners</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" id="formInput">
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="mousemoveDiv" style="margin-top: 20px; border: 1px solid #000; height: 100px; position: relative;">
+        Move your mouse here
+    </div>
+
+    <div id="toggleDiv" style="margin-top: 20px;">This is a toggled div</div>
+
+    <div id="colorDiv" style="margin-top: 20px; padding: 10px;">Change my background color</div>
+    <button id="redButton">Red</button>
+    <button id="yellowButton">Yellow</button>
+    <button id="blueButton">Blue</button>
+    <button id="greenButton">Green</button>
+
+    <div id="fontSizeDiv" style="margin-top: 20px;">Change my font size</div>
+    <button id="smallButton">Small</button>
+    <button id="mediumButton">Medium</button>
+    <button id="largeButton">Large</button>
+    <button id="xlargeButton">Extra Large</button>
+
+    <div id="clickableDivsContainer" style="margin-top: 20px;">
+        <div class="clickableDiv">Click me 1</div>
+        <div class="clickableDiv">Click me 2</div>
+        <div class="clickableDiv">Click me 3</div>
+    </div>
+
+    <div id="paragraphContainer" style="margin-top: 20px;">
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+    </div>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            console.log("Form submitted!");
+        });
+
+        document.getElementById("mousemoveDiv").addEventListener("mousemove", function(event) {
+            this.innerText = `X: ${event.clientX}, Y: ${event.clientY}`;
+        });
+
+        document.querySelectorAll("#paragraphContainer p").forEach(function(p) {
+            p.addEventListener("mouseover", function() {
+                this.style.color = "red";
+            });
+        });
+
+        document.querySelectorAll(".clickableDiv").forEach(function(div) {
+            div.addEventListener("click", function() {
+                this.style.backgroundColor = this.style.backgroundColor === "red" ? "white" : "red";
+            });
+        });
+
+        document.getElementById("redButton").addEventListener("click", function() {
+            document.getElementById("colorDiv").style.backgroundColor = "red";
+        });
+
+        document.getElementById("yellowButton").addEventListener("click", function() {
+            document.getElementById("colorDiv").style.backgroundColor = "yellow";
+        });
+
+        document.getElementById("blueButton").addEventListener("click", function() {
+            document.getElementById("colorDiv").style.backgroundColor = "blue";
+        });
+
+        document.getElementById("greenButton").addEventListener("click", function() {
+            document.getElementById("colorDiv").style.backgroundColor = "green";
+        });
+
+        document.getElementById("smallButton").addEventListener("click", function() {
+            document.getElementById("fontSizeDiv").style.fontSize = "12px";
+        });
+
+        document.getElementById("mediumButton").addEventListener("click", function() {
+            document.getElementById("fontSizeDiv").style.fontSize = "16px";
+        });
+
+        document.getElementById("largeButton").addEventListener("click", function() {
+            document.getElementById("fontSizeDiv").style.fontSize = "20px";
+        });
+
+        document.getElementById("xlargeButton").addEventListener("click", function() {
+            document.getElementById("fontSizeDiv").style.fontSize = "24px";
+        });
+    </script>
+</body>
+</html>
